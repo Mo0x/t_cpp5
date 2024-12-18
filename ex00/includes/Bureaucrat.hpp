@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:22:10 by mgovinda          #+#    #+#             */
-/*   Updated: 2024/12/18 17:28:34 by mgovinda         ###   ########.fr       */
+/*   Updated: 2024/12/18 18:43:28 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ class Bureaucrat
 
 	public:
 	Bureaucrat();
-	Bureaucrat(const Bureaucrat &src);
+	Bureaucrat(int grade);
+	Bureaucrat(std::string name);
 	Bureaucrat(std::string name, int grade);
+	Bureaucrat(const Bureaucrat &src);
 	Bureaucrat &operator=(const Bureaucrat &src);
 	~Bureaucrat();
 
@@ -33,6 +35,9 @@ class Bureaucrat
 	int			get_grade(void) const;
 	void		set_grade(int grade);
 
+	//member fun
+	void		increase_grade(void);
+	void		decrease_grade(void);
 };
 
 #endif
