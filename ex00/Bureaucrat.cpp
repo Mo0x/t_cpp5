@@ -14,8 +14,6 @@
 #include <sstream>
 #include <iostream>
 
-//test
-
 std::string ft_unnamed(void)
 {
 	static unsigned int count = 0;
@@ -39,6 +37,13 @@ Bureaucrat::Bureaucrat(int grade) :
 	m_grade(grade),
 	m_name(ft_unnamed())
 {
+	if (grade > 1 || grade < 151)
+		m_grade = grade;
+	else
+	{
+		std::cout << "Error grade isnt between 1 and 150, grade set @ 150" << std::endl;
+		grade = 150;
+	}
 	std::cout << "Unnamed but graded Bureaucrat constructor called: " << this->get_name() \
 				<< "and with the grade of "<< grade << std::endl;
 	return ;
@@ -57,6 +62,13 @@ Bureaucrat::Bureaucrat(std::string name, int grade) :
 	m_grade(grade),
 	m_name(name)
 {
+	if (grade > 1 || grade < 151)
+		m_grade = grade;
+	else
+	{
+		std::cout << "Error grade isnt between 1 and 150, grade set @ 150" << std::endl;
+		grade = 150;
+	}
 	std::cout << "Named and graded Bureaucrat constructor called : " << this->get_name() \
 				<< "and grade: " << this->get_grade() << std::endl;
 	return ;
@@ -68,4 +80,35 @@ Bureaucrat::Bureaucrat (const Bureaucrat &src) :
 {
 	return ;
 }
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
+{
+	if (this != &src)
+	{
+		this->m_grade = src.get_grade();
+	}
+	return (*this);
+}
 
+Bureaucrat::~Bureaucrat()
+{
+	return ;
+}
+
+std::string Bureaucrat::get_name(void) const
+{
+	return (this->m_name);
+}
+
+int Bureaucrat::get_grade(void) const
+{
+	return (this->m_grade);
+}
+
+void Bureaucrat::set_grade(int grade) :
+{
+	if (grade > 1 || grade < 151)
+		m_grade = grade;
+	else
+		std::cout << "Error grade isnt between 1 and 150" << std::endl;
+	return ;
+}
