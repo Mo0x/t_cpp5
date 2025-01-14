@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:22:10 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 17:17:00 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 17:35:14 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <string>
 #include <iostream>
+#include "Form.hpp"
 
 class Bureaucrat
 {
@@ -39,6 +40,7 @@ class Bureaucrat
 	//member fun
 	void		increase_grade(void);
 	void		decrease_grade(void);
+	void		signForm(Form &form);
 	
 	//Exceptions
 	class GradeTooLowException : public std::exception
