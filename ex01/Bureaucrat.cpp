@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 18:20:18 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 16:55:52 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 17:17:13 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,12 +125,12 @@ void Bureaucrat::increase_grade(void)
 		this->set_grade(this->get_grade() - 1);
 }
 
-const char *Bureaucrat::GradeTooLow::what(void) const throw()
+const char *Bureaucrat::GradeTooLowException::what(void) const throw()
 {
 	return("Grade too low");
 }
 
-const char *Bureaucrat::GradeTooHigh::what(void) const throw()
+const char *Bureaucrat::GradeTooHighException::what(void) const throw()
 {
 	return("Grade too high");
 }
