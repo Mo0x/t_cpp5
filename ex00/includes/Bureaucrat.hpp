@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:22:10 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 16:46:43 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 17:17:00 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ class Bureaucrat
 	void		decrease_grade(void);
 	
 	//Exceptions
-	class GradeTooLow : public std::exception
+	class GradeTooLowException : public std::exception
 	{
 		public:
 			virtual const char *what() const throw();
 	};
-	class GradeTooHigh : public std::exception
+	class GradeTooHighException : public std::exception
 	{
 		public:
 			virtual const char * what() const throw();
