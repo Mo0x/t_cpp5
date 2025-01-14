@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:12:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 17:33:50 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 18:48:19 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,26 @@ class Form
 {
     private :
         std::string m_name;
-        bool        m_signed = false;
+        bool        m_signed;
         const int   m_sign_req;
         const int   m_exec_req;
     
     public :
         Form();
         Form(std::string name, int sign_req, int exec_req);
-        Form(const &src);
-        Form const &operator=(Form const &copy);
+        Form(const Form &src);
+        Form const &operator=(const Form &copy);
         ~Form();
     //get set
-        std::string get_name();
-        int         get_sign_req();
-        int         get_exec_req();
-        int         get_signed();
+        std::string get_name(void);
+        int         get_sign_req(void);
+        int         get_exec_req(void);
+        bool        get_signed(void);
         void        set_name(std::string name);
         void        set_sign_req(int sign_req);
         void        set_exec_req(int exec_req);
-        void        set_signed(bool signed);
-        void        beSigned(Bureaucrat Bureaucrat);
+        void        set_signed(bool sign);
+        void        beSigned(Bureaucrat &bureaucrat);
 
     class GradeTooLowException : public std::exception
 	{

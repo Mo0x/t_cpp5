@@ -1,7 +1,8 @@
 NAME = ./form_up_maggots
 CXX = c++
 SRCS =	./main.cpp \
-		./Bureaucrat.cpp
+		./Bureaucrat.cpp \
+		./Form.cpp
 
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 INCDIRS = ./includes
