@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:55:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 18:48:13 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 18:57:47 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,20 @@ Form::Form(std::string name, int sign_req, int exec_req) :
     m_exec_req(exec_req)
 {
     if (sign_req < 1)
-        throw (Form::GradeTooHighException);
+        throw (Form::GradeTooHighException());
     else if (sign_req > 150)
-        throw (Form::GradeTooLowException);
+        throw (Form::GradeTooLowException());
     else if (exec_req < 1)
-        throw (Form::GradeTooHighException);
+        throw (Form::GradeTooHighException());
     else if (exec_req > 150)
-        throw (Form::GradeTooLowException);
-    std::cout << "Creating a Form nammed : " << this.get_name() << " grade requierment to sign : " 
-        << this.get_sign_req() << "grade requierment to execute : " 
-        << this.get_exec_req() << "." << std::endl;
+        throw (Form::GradeTooLowException());
+    std::cout << "Creating a Form nammed : " << this->get_name() << " grade requierment to sign : " 
+        << this->get_sign_req() << "grade requierment to execute : " 
+        << this->get_exec_req() << "." << std::endl;
     return ;
 }
 
-Form::Form(const &src) :
+Form::Form(const  Form &src) :
     m_name(src.get_name()),
     m_sign_req(src.get_sign_req()),
     m_exec_req(src.get_exec_req())
