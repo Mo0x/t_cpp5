@@ -1,12 +1,7 @@
 NAME = ./set_the_world_on_fire_please
 CXX = c++
 SRCS =	./main.cpp \
-		./A_Animal.cpp \
-		./Dog.cpp \
-		./Cat.cpp  \
-		./WrongAnimal.cpp \
-		./WrongCat.cpp\
-		./Brain.cpp
+		./Bureaucrat.cpp
 
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 INCDIRS = ./includes

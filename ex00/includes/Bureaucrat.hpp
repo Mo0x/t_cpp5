@@ -14,6 +14,7 @@
 #define BUREAUCRAT_HPP
 
 #include <string>
+#include <iostream>
 
 class Bureaucrat
 {
@@ -38,6 +39,20 @@ class Bureaucrat
 	//member fun
 	void		increase_grade(void);
 	void		decrease_grade(void);
+	
+	//Execptions
+	class GradeTooLow : public std::Execptions
+	{
+		public:
+			virtual const char *what() const throw();
+	};
+	class GradeTooHigh : public std::Execptions
+	{
+		public:
+			virutal const char * what() const throw();
+	}
 };
+
+std::ostream &operator<<(std::ostream &o, Bureaucrat *a);
 
 #endif

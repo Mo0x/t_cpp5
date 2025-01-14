@@ -37,13 +37,10 @@ Bureaucrat::Bureaucrat(int grade) :
 	m_grade(grade),
 	m_name(ft_unnamed())
 {
-	if (grade > 1 || grade < 151)
-		m_grade = grade;
-	else
-	{
-		std::cout << "Error grade isnt between 1 and 150, grade set @ 150" << std::endl;
-		grade = 150;
-	}
+	if (grade < 1)
+		throw (Bureaucrat::GradeTooHigh());
+	else if (grade > 150)
+		throw (Bureaucrat::GradeTooLow());
 	std::cout << "Unnamed but graded Bureaucrat constructor called: " << this->get_name() \
 				<< "and with the grade of "<< grade << std::endl;
 	return ;
@@ -62,13 +59,10 @@ Bureaucrat::Bureaucrat(std::string name, int grade) :
 	m_grade(grade),
 	m_name(name)
 {
-	if (grade > 1 || grade < 151)
-		m_grade = grade;
-	else
-	{
-		std::cout << "Error grade isnt between 1 and 150, grade set @ 150" << std::endl;
-		grade = 150;
-	}
+	if (grade < 1)
+		throw (Bureaucrat::GradeTooHigh());
+	else if (grade > 150)
+		throw (Bureaucrat::GradeTooLow());
 	std::cout << "Named and graded Bureaucrat constructor called : " << this->get_name() \
 				<< "and grade: " << this->get_grade() << std::endl;
 	return ;
@@ -111,4 +105,20 @@ void Bureaucrat::set_grade(int grade) :
 	else
 		std::cout << "Error grade isnt between 1 and 150" << std::endl;
 	return ;
+}
+
+const char *Bureaucrat::GradeTooLow::what(void) const throw()
+{
+	return("Grade too low");
+}
+
+const char *Bureaucrat::GradeTooHigh::what(void) const throw()
+[
+	return ("Grade too high");
+]
+
+std::ostream &operator<<(std::ostream &o, Bureaucrat *a)
+{
+	o << "Bureaucrat nammed " << a->get_name() << "graded : " << a->get_grade() << std::endl;
+	return (o);
 }
