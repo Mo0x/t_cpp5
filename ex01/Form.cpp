@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:55:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 18:57:47 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 19:01:38 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ Form::Form(const  Form &src) :
     return ;
 }
 
-Form &Form::operator=(const Bureaucrat &src)
+Form &Form::operator=(const Form &src)
 {
     if (this != &src)
     {

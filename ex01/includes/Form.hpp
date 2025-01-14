@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:12:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 18:53:03 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 19:03:04 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ class Form
         Form();
         Form(std::string name, int sign_req, int exec_req);
         Form(const Form &src);
-        Form const &operator=(const Form &copy);
+        Form &operator=(const Form &src);
         ~Form();
     //get set
-        std::string get_name(void);
-        int         get_sign_req(void);
-        int         get_exec_req(void);
-        bool        get_signed(void);
+        std::string get_name(void) const;
+        int         get_sign_req(void) const;
+        int         get_exec_req(void) const;
+        bool        get_signed(void) const;
         void        set_name(std::string name);
         void        set_sign_req(int sign_req);
         void        set_exec_req(int exec_req);
