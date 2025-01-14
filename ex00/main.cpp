@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:26:57 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 16:57:11 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 17:00:16 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,13 @@ int main(void)
         }
         try
         {
-            Bureaucrat b(1);
+            Bureaucrat b(3);
+            std::cout << b << std::endl;
+            b.increase_grade();
+            std::cout << b << std::endl;
+            b.increase_grade();
+            std::cout << b << std::endl;
+            b.increase_grade();
             std::cout << b << std::endl;
             b.increase_grade();
             std::cout << b << std::endl;
