@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 18:20:18 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 17:17:13 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 17:19:58 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ Bureaucrat::Bureaucrat(int grade) :
 	m_grade(grade)
 {
 	if (grade < 1)
-		throw (Bureaucrat::GradeTooHigh());
+		throw (Bureaucrat::GradeTooHighException());
 	else if (grade > 150)
-		throw (Bureaucrat::GradeTooLow());
+		throw (Bureaucrat::GradeTooLowException());
 	std::cout << "Unnamed but graded Bureaucrat constructor called: " << this->get_name() \
 				<< " and with the grade of "<< grade << std::endl;
 	return ;
@@ -60,9 +60,9 @@ Bureaucrat::Bureaucrat(std::string name, int grade) :
 	m_grade(grade)
 {
 	if (grade < 1)
-		throw (Bureaucrat::GradeTooHigh());
+		throw (Bureaucrat::GradeTooHighException());
 	else if (grade > 150)
-		throw (Bureaucrat::GradeTooLow());
+		throw (Bureaucrat::GradeTooLowException());
 	std::cout << "Named and graded Bureaucrat constructor called : " << this->get_name() \
 				<< " and grade: " << this->get_grade() << std::endl;
 	return ;
@@ -101,9 +101,9 @@ int Bureaucrat::get_grade(void) const
 void Bureaucrat::set_grade(int grade)
 {
 	if (grade < 1)
-		throw (Bureaucrat::GradeTooHigh());
+		throw (Bureaucrat::GradeTooHighException());
 	else if (grade > 150)
-		throw (Bureaucrat::GradeTooLow());
+		throw (Bureaucrat::GradeTooLowException());
 	else
 		this->m_grade = grade;
 	return ;
@@ -112,7 +112,7 @@ void Bureaucrat::set_grade(int grade)
 void Bureaucrat::decrease_grade(void)
 {
 	if (this->get_grade() + 1 > 150)
-		throw(Bureaucrat::GradeTooLow());
+		throw(Bureaucrat::GradeTooLowException());
 	else
 		this->set_grade(this->get_grade() + 1);
 }
@@ -120,7 +120,7 @@ void Bureaucrat::decrease_grade(void)
 void Bureaucrat::increase_grade(void)
 {
 	if (this->get_grade() - 1 < 1)
-		throw(Bureaucrat::GradeTooHigh());
+		throw(Bureaucrat::GradeTooHighException());
 	else
 		this->set_grade(this->get_grade() - 1);
 }
