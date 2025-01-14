@@ -1,4 +1,4 @@
-NAME = ./set_the_world_on_fire_please
+NAME = ./late_stage_capitalism
 CXX = c++
 SRCS =	./main.cpp \
 		./Bureaucrat.cpp

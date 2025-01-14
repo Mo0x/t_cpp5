@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:22:10 by mgovinda          #+#    #+#             */
-/*   Updated: 2024/12/18 18:43:28 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/14 16:46:43 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,19 @@ class Bureaucrat
 	void		increase_grade(void);
 	void		decrease_grade(void);
 	
-	//Execptions
-	class GradeTooLow : public std::Execptions
+	//Exceptions
+	class GradeTooLow : public std::exception
 	{
 		public:
 			virtual const char *what() const throw();
 	};
-	class GradeTooHigh : public std::Execptions
+	class GradeTooHigh : public std::exception
 	{
 		public:
-			virutal const char * what() const throw();
-	}
+			virtual const char * what() const throw();
+	};
 };
 
-std::ostream &operator<<(std::ostream &o, Bureaucrat *a);
+std::ostream &operator<<(std::ostream &o, Bureaucrat const &a);
 
 #endif
