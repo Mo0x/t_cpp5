@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:12:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/14 19:03:04 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:20:40 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ class Form
         int         get_exec_req(void) const;
         bool        get_signed(void) const;
         void        set_name(std::string name);
-        void        set_sign_req(int sign_req);
-        void        set_exec_req(int exec_req);
         void        set_signed(bool sign);
         void        beSigned(Bureaucrat &bureaucrat);
 
