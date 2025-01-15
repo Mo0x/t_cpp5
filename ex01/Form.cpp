@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:55:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/15 15:41:42 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/15 16:53:23 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,6 @@ Form &Form::operator=(const Form &src)
     if (this != &src)
     {
         this->m_name = src.get_name();
-       /*  this->m_sign_req = src.get_sign_req();
-        this->m_exec_req = src.get_exec_req(); */
     }
     return (*this);
 }
