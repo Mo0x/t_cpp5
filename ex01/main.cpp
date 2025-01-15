@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 18:45:32 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/15 17:02:48 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/15 17:08:51 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ int main(void)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	
+	std::cout << "end of tests" << std::endl;
 	return (0);
 }
