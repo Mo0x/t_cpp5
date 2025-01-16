@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:55:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 18:25:24 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 19:04:52 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ AForm &AForm::operator=(const AForm &src)
 {
     if (this != &src)
     {
-        this->m_name = src.get_name();
+		this->m_signed = src.get_signed();
     }
     return (*this);
 }
@@ -84,12 +84,6 @@ bool AForm::get_signed(void) const
     return (this->m_signed);
 }
 
-void AForm::set_name(std::string name)
-{
-    m_name = name;
-}
-
-
 void    AForm::set_signed(bool sign)
 {
     this->m_signed = sign;
@@ -102,7 +96,7 @@ void AForm::beSigned(Bureaucrat &bureaucrat)
 	else
 	{
 		this->m_signed = true;
-		std::cout << bureaucrat.get_name() << " successfully signed " << this->m_name << std::endl;
+		std::cout << bureaucrat.get_name() << " successfully signed " << this->m_name << "." <<std::endl;
 	}
 }
 

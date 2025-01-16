@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:22:10 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 16:57:49 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 18:58:18 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ class Bureaucrat
 	void		increase_grade(void);
 	void		decrease_grade(void);
 	void		signForm(AForm &form);
+	void		executeForm(AForm const &form);
 	
 	//Exceptions
 	class GradeTooLowException : public std::exception

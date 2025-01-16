@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 18:20:18 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 17:55:14 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 19:11:13 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,7 +146,7 @@ void	Bureaucrat::signForm(AForm &form)
 	try
 	{
 		form.beSigned(*this);
-		std::cout << this->get_name() << " signs " << form.get_name() << std::endl;
+		std::cout << this->get_name() << " signs " << form.get_name() << "." << std::endl;
 	}
 	catch (std::exception &e)
 	{
@@ -154,3 +154,13 @@ void	Bureaucrat::signForm(AForm &form)
 	}
 }
 
+void Bureaucrat::executeForm(AForm const &form)
+{
+	if (!form.get_signed())
+		throw(AForm::FormNotSigned());
+	if (this->get_grade() > form.get_exec_req())
+		throw(AForm::GradeTooLowException());
+	form.execute(*this);
+	std::cout << this->get_name() << " executed the form: " << form.get_name() << "." << std::endl;
+	return ;
+}
