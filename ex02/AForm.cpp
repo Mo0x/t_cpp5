@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:55:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 17:24:42 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 18:25:24 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ AForm::AForm(std::string name, int sign_req, int exec_req) :
     else if (exec_req < 1)
         throw (AForm::GradeTooHighException());
     else if (exec_req > 150)
-        throw (Form::GradeTooLowException());
+        throw (AForm::GradeTooLowException());
     std::cout << "Creating a AForm nammed : " << this->get_name() << " grade requierment to sign : " 
         << this->get_sign_req() << " grade requierment to execute : " 
         << this->get_exec_req() << "." << std::endl;
@@ -118,7 +118,7 @@ const char *AForm::GradeTooHighException::what(void) const throw()
 
 const char *AForm::FormNotSigned::what(void) const throw()
 {
-	return("Form not signed.")
+	return("Form not signed.");
 }
 
 std::ostream &operator<<(std::ostream &o, AForm const &a)

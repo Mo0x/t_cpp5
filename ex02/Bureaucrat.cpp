@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 18:20:18 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/15 15:40:17 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:55:14 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,7 @@ std::ostream &operator<<(std::ostream &o, Bureaucrat const &a)
 	return (o);
 }
 
-void	Bureaucrat::signForm(Form &form)
+void	Bureaucrat::signForm(AForm &form)
 {
 	try
 	{
