@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:12:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 17:23:45 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:25:36 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ class AForm
 	{
 		public:
 			virtual const char *what() const throw();
-	}
+	};
 };
 
 std::ostream &operator<<(std::ostream &o, AForm const &a);

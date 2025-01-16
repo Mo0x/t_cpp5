@@ -2,7 +2,8 @@ NAME = ./form_28c
 CXX = c++
 SRCS =	./main.cpp \
 		./Bureaucrat.cpp \
-		./Form.cpp
+		./Form.cpp \
+		./ShrubberyCreationForm.cpp
 
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 INCDIRS = ./includes
