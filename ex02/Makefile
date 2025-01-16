@@ -1,4 +1,4 @@
-NAME = ./form_up_maggots
+NAME = ./form_28c
 CXX = c++
 SRCS =	./main.cpp \
 		./Bureaucrat.cpp \
