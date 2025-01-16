@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:07:20 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 19:40:15 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 19:46:33 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 class ShrubberyCreationForm : public AForm
 {
 	private:
-		std::string m_target;
+	std::string	m_target;
 
 	public:
 	ShrubberyCreationForm();
