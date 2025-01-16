@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:12:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 16:59:04 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:03:41 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,14 @@ class AForm
 		AForm &operator=(const AForm &src);
 		~AForm();
 	//get set
-		std::string get_name(void) const;
-		int			get_sign_req(void) const;
-		int			get_exec_req(void) const;
-		bool		get_signed(void) const;
-		void		set_name(std::string name);
-		void		set_signed(bool sign);
-		void		beSigned(Bureaucrat &bureaucrat);
+		std::string			get_name(void) const;
+		int					get_sign_req(void) const;
+		int					get_exec_req(void) const;
+		bool				get_signed(void) const;
+		void				set_name(std::string name);
+		void				set_signed(bool sign);
+		void				beSigned(Bureaucrat &bureaucrat);
+		virtual void		execute(Bureaucrat const &executor) = 0;
 
 	class GradeTooLowException : public std::exception
 	{
