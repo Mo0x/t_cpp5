@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:55:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 19:04:52 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 19:35:07 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,19 @@ void AForm::beSigned(Bureaucrat &bureaucrat)
 	{
 		this->m_signed = true;
 		std::cout << bureaucrat.get_name() << " successfully signed " << this->m_name << "." <<std::endl;
+	}
+}
+
+void	AForm::execute(Bureaucrat const &executor) const
+{
+	if (!this->get_signed())
+		throw(AForm::FormNotSigned());
+	else if (executor.get_grade() > this->get_exec_req())
+		throw(AForm::GradeTooLowException());
+	else
+	{
+		std::cout << executor.get_name() << "executes the form " << this->get_name() << "." << std::endl;
+		this->doExec(executor);
 	}
 }
 

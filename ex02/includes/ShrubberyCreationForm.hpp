@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:07:20 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 18:42:51 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 19:40:15 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class ShrubberyCreationForm : public AForm
 	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &src);
 	~ShrubberyCreationForm();
 
-	void execute(Bureaucrat const &executor) const;
+	void doExec(Bureaucrat const &executor) const;
 };
 
 std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &a);

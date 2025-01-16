@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:28:36 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 18:52:12 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 19:42:51 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,8 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 	return ;
 }
 
-void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
+void	ShrubberyCreationForm::doExec(Bureaucrat const &executor) const
 {
-	if (!this->get_signed())
-		throw(AForm::FormNotSigned());
-	if (executor.get_grade() > this->get_exec_req())
-		throw(AForm::GradeTooLowException());
 	std::ostringstream oss;
 	oss << this->m_target << "_shrubbery";
 	std::string name = oss.str();
@@ -70,7 +66,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 	}
 	file << TREE;
 	file.close();
-	std::cout << "Shrubberization done." << std::endl;
+	std::cout << executor.get_name() <<" has done the Shrubberization." << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &a)

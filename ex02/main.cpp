@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 18:45:32 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 19:09:44 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 19:44:14 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,8 @@ int main(void)
 		Bureaucrat alphonse("Big Al", 42);
 		alphonse.signForm(shrub);
 		alphonse.executeForm(shrub);
+
+		Bureaucrat gros_nullos("nul", 150);
+		gros_nullos.executeForm(shrub);
 	}
 }

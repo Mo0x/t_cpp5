@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:12:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 19:19:15 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 19:41:30 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class AForm
 		void				set_signed(bool sign);
 		void				beSigned(Bureaucrat &bureaucrat);
 		void				execute(Bureaucrat const &executor) const;
-		virtual void		doExec(Bureaucrat const &bureaucrat) const = 0;
+		virtual void		doExec(Bureaucrat const &executor) const = 0;
 
 	class GradeTooLowException : public std::exception
 	{
