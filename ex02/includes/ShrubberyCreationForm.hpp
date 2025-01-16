@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:07:20 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 17:08:46 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:11:41 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@
 
 class ShurbberyCreationForm : public AForm
 {
-
+	ShurbberyCreationForm();
+	ShurbberyCreationForm(std::string name);
+	ShurbberyCreationForm(ShurbberyCreationForm &src);
+	ShurbberyCreationForm &operator=(const ShurbberyCreationForm &src);
+	~ShurbberyCreationForm();
 };
 
 #endif

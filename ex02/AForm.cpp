@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:55:37 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 16:55:52 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:24:42 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,12 +108,17 @@ void AForm::beSigned(Bureaucrat &bureaucrat)
 
 const char *AForm::GradeTooLowException::what(void) const throw()
 {
-	return("Grade too low");
+	return("Grade too low.");
 }
 
 const char *AForm::GradeTooHighException::what(void) const throw()
 {
-	return("Grade too high");
+	return("Grade too high.");
+}
+
+const char *AForm::FormNotSigned::what(void) const throw()
+{
+	return("Form not signed.")
 }
 
 std::ostream &operator<<(std::ostream &o, AForm const &a)
