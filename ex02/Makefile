@@ -3,7 +3,8 @@ CXX = c++
 SRCS =	./main.cpp \
 		./Bureaucrat.cpp \
 		./AForm.cpp \
-		./ShrubberyCreationForm.cpp
+		./ShrubberyCreationForm.cpp \
+		./RobotomyRequestForm.cpp
 
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 INCDIRS = ./includes

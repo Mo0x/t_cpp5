@@ -6,7 +6,7 @@
 /*   By: mgovinda <mgovinda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:28:36 by mgovinda          #+#    #+#             */
-/*   Updated: 2025/01/16 19:42:51 by mgovinda         ###   ########.fr       */
+/*   Updated: 2025/01/17 16:51:20 by mgovinda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	ShrubberyCreationForm::doExec(Bureaucrat const &executor) const
 std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &a)
 {
 	o << "Shrubbery Creation Form named " << a.get_name() << 
-		(a.get_signed() ? " is signed, " : "is not signed, ") << " signed grade : " 
+		(a.get_signed() ? " is signed, " : "is not signed, ") << "sign grade : " 
 		<< a.get_sign_req() << "exec grade : " << a.get_exec_req() << "." << std::endl;
 	return (o);
 }
